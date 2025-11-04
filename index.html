@@ -1,0 +1,227 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webinar GRATIS Incoterms 2020: La Verdad que tu U no te enseña</title>
+    <!-- Carga de Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de Tailwind para usar la fuente Inter --><style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* Fondo gris claro */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor Principal Centrado --><div class="min-h-screen flex flex-col items-center justify-center p-4">
+
+        <!-- Tarjeta de Contenido Principal --><div class="bg-white shadow-2xl rounded-xl max-w-4xl w-full mx-auto overflow-hidden lg:flex lg:h-[700px]">
+
+            <!-- Bloque Izquierdo: Promesa y Valor --><div class="lg:w-1/2 p-6 md:p-10 bg-indigo-700 text-white flex flex-col justify-center">
+                
+                <!-- GANCHO / HEADLINE --><p class="text-xl font-medium mb-2 uppercase tracking-wider">¡SOLO PARA ESTUDIANTES!</p>
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+                    <span class="text-yellow-300">EL ERROR FATAL</span> de Incoterms que tu U no te enseña.
+                </h1>
+                
+                <!-- SUBHEADLINE / DOLOR --><p class="text-lg mb-6 opacity-90">
+                    Asegura tu práctica laboral. Descubre la versión oficial **Incoterms® 2020** y los 4 errores que cuestan miles a las empresas de Ecuador.
+                </p>
+
+                <!-- BENEFICIOS CLAVE --><ul class="space-y-3 mb-8 text-lg">
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 mr-2 flex-shrink-0 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        **3 Webinars GRATIS** con el <span class="font-bold">Experto #1 de Ecuador.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 mr-2 flex-shrink-0 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Evita usar FOB incorrectamente y sé el primero en tu clase en dominar **FCA**.
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 mr-2 flex-shrink-0 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Conoce el error de **DAP vs DPU** que cuesta cientos en logística.
+                    </li>
+                </ul>
+
+                <!-- FECHA Y HORA DEFINITIVAS --><div class="text-center bg-indigo-800 p-4 rounded-lg">
+                    <p class="text-lg font-bold">¡FECHAS CONFIRMADAS!</p>
+                    <p class="text-xl font-bold tracking-wide">12, 19 y 26 de NOVIEMBRE</p>
+                    <p class="text-2xl font-extrabold tracking-wide">A las 16:00h (EC)</p>
+                </div>
+            </div>
+
+            <!-- Bloque Derecho: Formulario de Registro --><div class="lg:w-1/2 p-6 md:p-10 flex flex-col justify-center">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">¡Asegura tu cupo GRATIS!</h2>
+                
+                <form id="webinarForm" onsubmit="return handleFormSubmit(event)" class="space-y-4">
+                    
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Nombre Completo</label>
+                        <input type="text" id="name" name="name" required
+                               class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Universitario</label>
+                        <input type="email" id="email" name="email" required
+                               placeholder="ej: nombre@universidad.edu.ec"
+                               class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+
+                    <div>
+                        <label for="university" class="block text-sm font-medium text-gray-700">Universidad/Carrera</label>
+                        <input type="text" id="university" name="university" placeholder="Negocios Internacionales - UTA"
+                               class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+
+                    <p id="message" class="text-center text-sm font-medium text-red-600 hidden">
+                        <!-- Mensajes de feedback se mostrarán aquí --></p>
+
+                    <button type="submit" id="submitButton"
+                            class="w-full py-3 px-4 border border-transparent rounded-lg shadow-lg text-lg font-bold text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-150 ease-in-out transform hover:scale-105">
+                        ¡QUIERO MI PASE GRATIS! (Cupos Limitados)
+                    </button>
+                    
+                </form>
+
+                <!-- Aviso Legal --><p class="mt-4 text-xs text-gray-500 text-center">
+                    Garantizamos la privacidad de tus datos. Recibirás el link de acceso y la información del curso a tu correo.
+                </p>
+
+            </div>
+        </div>
+        
+        <!-- Sección de Autoridad - Experto --><div class="mt-8 p-6 bg-white rounded-xl shadow-xl max-w-4xl w-full">
+            <h3 class="text-2xl font-bold text-indigo-700 mb-4 text-center">Conoce al Experto que te Capacitará</h3>
+            <div class="flex items-center space-x-6">
+                <!-- Foto del experto --><div class="flex-shrink-0">
+                    <img class="h-20 w-20 rounded-full object-cover border-4 border-yellow-300" src="Roberto Rosales 2022.jpg" alt="Foto de Roberto Rosales">
+                </div>
+                <!-- Bio del experto --><div>
+                    <p class="text-xl font-semibold text-gray-800">Roberto Rosales</p>
+                    <p class="text-sm text-gray-600">
+                        Autoridad #1 en Incoterms en Ecuador. Consultor para las 5 principales Agencias Aduanales del país y profesor invitado en las principales cámaras de comercio.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bloque de Imports y Lógica de Firebase/Firestore --><script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Global variables provided by the environment
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        let db, auth;
+
+        // --- Initialization ---
+        async function initializeFirebase() {
+            try {
+                // setLogLevel('debug'); // Uncomment for debugging
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+
+                // Sign in using custom token or anonymously
+                if (initialAuthToken) {
+                    await signInWithCustomToken(auth, initialAuthToken);
+                } else {
+                    await signInAnonymously(auth);
+                }
+            } catch (error) {
+                console.error("Error initializing Firebase:", error);
+                document.getElementById('message').textContent = 'Error de conexión. Intenta de nuevo más tarde.';
+                document.getElementById('message').classList.remove('hidden');
+            }
+        }
+
+        // --- Utility ---
+        // Path for public data (leads)
+        function getLeadsCollectionPath() {
+            return `artifacts/${appId}/public/data/webinar_leads`;
+        }
+
+        // --- Form Submission Logic (Exported for global use) ---
+        window.handleFormSubmit = async function (event) {
+            event.preventDefault();
+            
+            if (!db) {
+                console.error("Firebase not initialized.");
+                return;
+            }
+
+            const form = document.getElementById('webinarForm');
+            const message = document.getElementById('message');
+            const submitButton = document.getElementById('submitButton');
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const university = document.getElementById('university').value;
+
+            // Prepare UI for loading state
+            message.classList.add('hidden');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Registrando...';
+
+            const leadData = {
+                name: name,
+                email: email,
+                university: university,
+                timestamp: new Date().toISOString(),
+                webinar_version: "Webinar Incoterms 2020",
+                source: 'Landing Page'
+            };
+
+            const ZOOM_LINK = "https://zoom.us/j/1234567890?pwd=WebinarIncotermsGratis2025"; // SIMULACIÓN DEL ENLACE DE ZOOM
+            const EBOOK_COMPRA_LINK = "https://compra.tucertificacion.ec/guia-incoterms-2020"; // SIMULACIÓN DEL ENLACE DE COMPRA DEL EBOOK ($25 USD)
+
+            try {
+                // 1. Save lead to Firestore (Public Data)
+                const leadsCollection = collection(db, getLeadsCollectionPath());
+                await addDoc(leadsCollection, leadData);
+
+                // 2. Display Success Message and Links
+                message.classList.remove('hidden', 'text-red-600');
+                message.classList.add('text-green-600', 'p-4', 'bg-green-100', 'rounded-lg');
+                message.innerHTML = `
+                    <p class="font-bold">¡REGISTRO EXITOSO, ${name}!</p>
+                    <p class="mt-2">Tu pase GRATIS ha sido confirmado y tus datos guardados.</p>
+                    
+                    <p class="mt-4 font-extrabold text-blue-800">ENLACE DEL WEBINAR (12, 19, 26 NOV - 16:00 EC):</p>
+                    <a href="${ZOOM_LINK}" target="_blank" class="block mt-1 text-indigo-700 underline break-words hover:text-indigo-900">${ZOOM_LINK}</a>
+                    
+                    <p class="mt-4 font-extrabold text-blue-800">GUÍA PRÁCTICA (Costo: $25 USD):</p>
+                    <a href="${EBOOK_COMPRA_LINK}" target="_blank" class="block mt-1 text-indigo-700 underline break-words hover:text-indigo-900">Comprar Guía Incoterms® 2020 por $25 USD</a>
+
+                    <p class="mt-4 text-xs">También recibirás ambos enlaces a tu correo electrónico en los próximos minutos.</p>
+                `;
+
+                form.reset();
+                submitButton.style.display = 'none'; // Ocultar el botón después del éxito
+
+            } catch (e) {
+                console.error("Error al registrar el lead:", e);
+                message.classList.remove('hidden');
+                message.classList.remove('text-green-600');
+                message.classList.add('text-red-600', 'p-4', 'bg-red-100', 'rounded-lg');
+                message.innerHTML = 'Hubo un error al guardar tu registro. Por favor, verifica tu conexión e intenta de nuevo.';
+
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = '¡QUIERO MI PASE GRATIS! (Cupos Limitados)';
+            }
+        }
+
+        // Start Firebase initialization on load
+        initializeFirebase();
+    </script>
+</body>
+</html>
