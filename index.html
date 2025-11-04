@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -56,13 +56,7 @@
             <div class="lg:w-1/2 p-6 md:p-10 flex flex-col justify-center">
                 <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">¡Asegura tu cupo GRATIS!</h2>
                 
-                <!-- 
-                    SOLUCIÓN FINAL DE REDIRECCIÓN NETLIFY
-                    1. netlify-honeypot="bot-field" para evitar spam.
-                    2. Campo oculto data-netlify-honeypot="bot-field".
-                    3. Campo oculto netlify-recaptcha="true" para más seguridad.
-                    4. CAMPO OCULTO netlify-redirect="/success.html" para asegurar la redirección a la página de éxito.
-                -->
+                <!-- FORMULARIO VISIBLE AL USUARIO -->
                 <form name="webinar" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
                     
                     <!-- CAMPO DE REDIRECCIÓN A LA PÁGINA DE ÉXITO -->
@@ -125,5 +119,15 @@
         </div>
 
     </div>
+
+    <!-- 
+        COPIA ESTÁTICA DEL FORMULARIO OCULTO 
+        Netlify requiere que el formulario esté presente en el HTML sin JS para detectarlo
+    -->
+    <form name="webinar" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="text" name="university" />
+    </form>
 </body>
 </html>
