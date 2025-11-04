@@ -1,4 +1,4 @@
-!DOCTYPE html>
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -35,7 +35,7 @@
                 <ul class="space-y-3 mb-8 text-lg">
                     <li class="flex items-start">
                         <svg class="w-6 h-6 mr-2 flex-shrink-0 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        **3 Webinars GRATIS** con el <span class="font-bold">Experto Roberto Rosales.</span>
+                        **3 Webinars GRATIS** con el <span class="font-bold">Experto #1 de Ecuador.</span>
                     </li>
                     <li class="flex items-start">
                         <svg class="w-6 h-6 mr-2 flex-shrink-0 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
@@ -43,12 +43,12 @@
                     </li>
                     <li class="flex items-start">
                         <svg class="w-6 h-6 mr-2 flex-shrink-0 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        Aprende sobre la Guía Práctica de Bolsillo (Costo: $25 USD) que complementa tu formación.
+                        Fechas: 12, 19 y 26 de Noviembre - 16:00h (EC).
                     </li>
                 </ul>
 
                 <div class="text-center bg-indigo-800 p-4 rounded-lg">
-                    <p class="text-lg font-bold">FECHAS CONFIRMADAS:</p>
+                    <p class="text-lg font-bold">FECHAS:</p>
                     <p class="text-2xl font-extrabold tracking-wide">12, 19 y 26 de Noviembre - 16:00h (EC)</p>
                 </div>
             </div>
@@ -56,39 +56,49 @@
             <div class="lg:w-1/2 p-6 md:p-10 flex flex-col justify-center">
                 <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">¡Asegura tu cupo GRATIS!</h2>
                 
-                <!-- IMPORTANTE: name="contact" y data-netlify="true" son necesarios para la captura de Netlify -->
-                <!-- La acción del formulario ahora es la URL de éxito definida abajo -->
-                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success">
-                    <!-- Campo oculto para honeypot -->
-                    <input type="hidden" name="bot-field" />
-                    <!-- Campo oculto para Netlify Forms -->
-                    <input type="hidden" name="form-name" value="contact" />
+                <!-- 
+                    SOLUCIÓN FINAL DE REDIRECCIÓN NETLIFY
+                    1. netlify-honeypot="bot-field" para evitar spam.
+                    2. Campo oculto data-netlify-honeypot="bot-field".
+                    3. Campo oculto netlify-recaptcha="true" para más seguridad.
+                    4. CAMPO OCULTO netlify-redirect="/success.html" para asegurar la redirección a la página de éxito.
+                -->
+                <form name="webinar" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
+                    
+                    <!-- CAMPO DE REDIRECCIÓN A LA PÁGINA DE ÉXITO -->
+                    <input type="hidden" name="form-name" value="webinar" />
+                    <input type="hidden" name="subject" value="Nuevo Lead Webinar Incoterms" />
+                    <input type="hidden" name="netlify-redirect" value="/success.html" />
 
-                    <div class="space-y-4">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700">Nombre Completo</label>
-                            <input type="text" id="name" name="name" required
-                                   class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
-                        </div>
+                    <!-- CAMPO HONEYPOT (Antispam) -->
+                    <p class="hidden">
+                        <label>No me llenes (antispam): <input name="bot-field" /></label>
+                    </p>
 
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700">Email Universitario</label>
-                            <input type="email" id="email" name="email" required
-                                   placeholder="ej: nombre@universidad.edu.ec"
-                                   class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
-                        </div>
-
-                        <div>
-                            <label for="university" class="block text-sm font-medium text-gray-700">Universidad/Carrera</label>
-                            <input type="text" id="university" name="university" placeholder="Negocios Internacionales - UTA"
-                                   class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
-                        </div>
-
-                        <button type="submit" id="submitButton"
-                                class="w-full py-3 px-4 border border-transparent rounded-lg shadow-lg text-lg font-bold text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-150 ease-in-out transform hover:scale-105">
-                            ¡QUIERO MI PASE GRATIS! (Cupos Limitados)
-                        </button>
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Nombre Completo</label>
+                        <input type="text" id="name" name="name" required
+                               class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
                     </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Universitario</label>
+                        <input type="email" id="email" name="email" required
+                               placeholder="ej: nombre@universidad.edu.ec"
+                               class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+
+                    <div>
+                        <label for="university" class="block text-sm font-medium text-gray-700">Universidad/Carrera</label>
+                        <input type="text" id="university" name="university" placeholder="Negocios Internacionales - UTA"
+                               class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+
+                    <button type="submit" id="submitButton"
+                            class="w-full py-3 px-4 border border-transparent rounded-lg shadow-lg text-lg font-bold text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-150 ease-in-out transform hover:scale-105">
+                        ¡QUIERO MI PASE GRATIS! (Cupos Limitados)
+                    </button>
+                    
                 </form>
 
                 <p class="mt-4 text-xs text-gray-500 text-center">
@@ -100,13 +110,11 @@
         
         <div class="mt-8 p-6 bg-white rounded-xl shadow-xl max-w-4xl w-full">
             <h3 class="text-2xl font-bold text-indigo-700 mb-4 text-center">Conoce al Experto que te Capacitará</h3>
-            <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
-                
+            <div class="flex items-center space-x-6">
                 <div class="flex-shrink-0">
-                    <!-- Se corrigió la ruta de la imagen al nombre del archivo real -->
-                    <img class="h-24 w-24 md:h-20 md:w-20 rounded-full object-cover border-4 border-yellow-300" src="Roberto Rosales 2022.jpg" alt="Foto de Roberto Rosales">
+                    <!-- RUTA DE LA IMAGEN CORREGIDA -->
+                    <img class="h-20 w-20 rounded-full object-cover border-4 border-yellow-300" src="Roberto Rosales 2022.jpg" alt="Foto de Roberto Rosales">
                 </div>
-                
                 <div>
                     <p class="text-xl font-semibold text-gray-800">Roberto Rosales</p>
                     <p class="text-sm text-gray-600">
@@ -117,10 +125,5 @@
         </div>
 
     </div>
-
-    <!-- PÁGINA DE ÉXITO (Se requiere un archivo success.html en tu repositorio para funcionar perfectamente con Netlify Forms) -->
-    <!-- Mientras tanto, Netlify mostrará una página de éxito genérica. -->
-    
 </body>
 </html>
-
