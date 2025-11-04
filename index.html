@@ -56,13 +56,14 @@
             <div class="lg:w-1/2 p-6 md:p-10 flex flex-col justify-center">
                 <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">¡Asegura tu cupo GRATIS!</h2>
                 
-                <!-- FORMULARIO VISIBLE AL USUARIO -->
-                <form name="webinar" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
+                <!-- 
+                    FORMULARIO FINAL Y SIMPLE. Netlify lo detectará.
+                    El action="/success.html" dirige directamente al archivo que creaste.
+                -->
+                <form name="webinar" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
                     
-                    <!-- CAMPO DE REDIRECCIÓN A LA PÁGINA DE ÉXITO -->
+                    <!-- CAMPO OCULTO PARA IDENTIFICACIÓN DEL FORMULARIO -->
                     <input type="hidden" name="form-name" value="webinar" />
-                    <input type="hidden" name="subject" value="Nuevo Lead Webinar Incoterms" />
-                    <input type="hidden" name="netlify-redirect" value="/success.html" />
 
                     <!-- CAMPO HONEYPOT (Antispam) -->
                     <p class="hidden">
@@ -119,15 +120,5 @@
         </div>
 
     </div>
-
-    <!-- 
-        COPIA ESTÁTICA DEL FORMULARIO OCULTO 
-        Netlify requiere que el formulario esté presente en el HTML sin JS para detectarlo
-    -->
-    <form name="webinar" netlify netlify-honeypot="bot-field" hidden>
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <input type="text" name="university" />
-    </form>
 </body>
 </html>
